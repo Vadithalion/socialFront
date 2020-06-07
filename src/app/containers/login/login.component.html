@@ -1,1 +1,24 @@
-<p>login works!</p>
+<section class="container">
+    <form class="form" [formGroup]="userForm">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+        <small id="emailHelp" class="form-text text-muted">No se lo mostraremos a terceros.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Contraseña</label>
+        <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" />
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1"  (click)="showPass()"/>
+        <label class="form-check-label" for="exampleCheck1">Show Password</label>
+      </div>
+      <button (click)="click_login()" type="submit"   class="btn btn-danger">
+        Confirmar
+      </button>
+      <label></label>
+      <a class="btn" routerLink="/register">Registrarme</a>
+    </form>
+    <label class="text-danger" *ngIf="error !== ''">ERROR: {{ error }}</label>
+    <label class="text-success" *ngIf="success !== ''">OK!: {{ success }}</label>
+  </section>

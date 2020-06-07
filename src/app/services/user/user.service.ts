@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-//  [x: string]: Object;
+  [x: string]: Object;
 
   baseUrl = 'http://localhost:8000/api';
 
@@ -26,15 +26,16 @@ export class UserService {
 }
 
 async login(body) {
-    const url = this.baseUrl + '/login'; 
+    const url = this.baseUrl + '/login';
     try {
-        const data: any = await this.http.post(url, body);
+        console.log(url);
+        console.log(body);
+        const data = await this.http.post(url, body).toPromise();
         localStorage.setItem('user-token', JSON.stringify(data));
-        return Promise.resolve(data.message);
+        return Promise.resolve('hola');
     } catch (err) {
         console.log(err);
         return Promise.reject(err.error.message);
     }
 }
-
 }
