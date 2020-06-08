@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+  public title: string;
 
-  constructor() { }
+  constructor() { 
+    this.title = 'Bienvenid@ a La Red única';
+  }
 
   ngOnInit(): void {
   }
