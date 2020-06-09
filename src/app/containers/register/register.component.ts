@@ -12,6 +12,9 @@ import { Router } from '@angular/router';
 
 export class RegisterComponent implements OnInit {
 
+  public title: string;
+
+
   userForm = new FormGroup({
     name: new FormControl ('', Validators.required),
     surname: new FormControl(),
@@ -22,7 +25,10 @@ export class RegisterComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router
-  ) { }
+  ) {
+    this.title = 'Regístrate, y pasa a formar parte de La Red, la única que las gobierna todas!';
+
+  }
 
 
   ngOnInit(): void {}

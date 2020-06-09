@@ -38,4 +38,24 @@ async login(body) {
         return Promise.reject(err.error.message);
     }
 }
+
+getToken(){
+    const token = JSON.parse(localStorage.getItem('token'));
+    if (token != undefined){
+        this.token = token;
+    }else{
+        this.token = null;
+        }
+    return this.token;
+    }
+
+getIdentity(){
+    const identity = JSON.parse(localStorage.getItem('user-token'));
+    if (identity != null){
+        this.identity = identity;
+    }else{
+        this.identity = null;
+    }
+    return this.identity;
+    }
 }

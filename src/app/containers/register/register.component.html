@@ -1,26 +1,40 @@
-<section class="container">
-    <form class="form" [formGroup]="userForm">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Nombre</label>
-        <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+
+  <div class="general-container">
+    <div class="jumbotron">
+      <h1 class="display-4">Bienvenid@ a La Red única</h1>
+      <p class="lead">Disfruta de las publicaciones de tus amig@s y comparte tu día!!!</p>
+      <hr class="my-4">
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-4 ">
+          <h1 class="h1-strong">{{title}}</h1>
+  
+          
+  
+          <form class="form" [formGroup]="userForm">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre</label>
+              <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Apellidos</label>
+              <input type="text" class="form-control" formControlName="surname" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+              <small id="emailHelp" class="form-text text-muted">No se lo mostraremos a nadie.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input type="password" class="form-control" formControlName="password" id="inputPassword" />
+            </div>
+            <input type="checkbox"  (click)="showPass()"> <label>Ocultar Contraseña</label>
+            <button (click)="click_register()"  routerLink="/" type="submit" class="btn btn-danger">
+              Confirmar
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Apellidos</label>
-        <input type="text" class="form-control" formControlName="surname" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
-          aria-describedby="emailHelp" />
-        <small id="emailHelp" class="form-text text-muted">No se lo mostraremos a nadie.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" formControlName="password" id="inputPassword" />
-      </div>
-      <input type="checkbox"  (click)="showPass()"> <label>Ocultar Contraseña</label>
-      <button (click)="click_register()"  routerLink="/" type="submit" class="btn btn-danger">
-        Confirmar
-      </button>
-    </form>
-  </section>
+    </div>

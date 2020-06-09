@@ -1,14 +1,13 @@
 <div class="general-container">
 	<div class="jumbotron">
 		<h1 class="display-4">{{title}}</h1>
-		<p class="lead">Disfruta de las publicaciones de tus amig@s y comparte tu día!!!</p>
+		<p class="lead">una red para gobernarlas a todas. Una red para encontralas, una Red para atraer a todas las redes...</p>
 		<hr class="my-4">
-		<!-- Si estamos logueados 
 		<p *ngIf="identity"><strong>Aquí tienes una breve introducción a algunas secciones</strong></p>
 
 		<div class="row" *ngIf="identity && identity!=null">
 			<div class="col-lg-3">
-				<a [routerLink]="['/perfil', identity._id]">
+				<a [routerLink]="['/userinfo', identity.id]">
 					<div class="card text-white bg-primary mb-3">						
 						<div class="card-header">
 							<h4>
@@ -36,7 +35,7 @@
 				</a>
 			</div>
 			<div class="col-lg-3">
-				<a [routerLink]="['/gente']">
+				<a [routerLink]="['/users']">
 					<div class="card text-white bg-success mb-3">
 						<div class="card-header">
 							<h4>
@@ -44,11 +43,12 @@
 							</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text">Conoce a todos los usuario de MiREDE</p>
+							<p class="card-text">Conoce a todos los usuario de La Red Única</p>
 						</div>
 					</div>
 				</a>
 			</div>
+			
 			<div class="col-lg-3">
 				<a [routerLink]="['/mensajes']">
 					<div class="card text-white bg-info mb-3">
@@ -63,9 +63,12 @@
 					</div>
 				</a>
 			</div>
+			
+
 		</div>
-        -->
+        
 		<!-- Si NO estamos logueados -->
+		no
 		<div class="row justify-content-center">
 			<div class="col-lg-3">
 				<a [routerLink]="['/register']">

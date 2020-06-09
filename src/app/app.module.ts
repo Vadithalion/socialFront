@@ -9,6 +9,10 @@ import { LoginComponent } from './containers/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './containers/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { UserinfoComponent } from './containers/userinfo/userinfo.component';
+import { TimelineComponent } from './containers/timeline/timeline.component';
+import { AllusersComponent } from './containers/allusers/allusers.component';
 
 
 @NgModule({
@@ -16,7 +20,12 @@ import { HomeComponent } from './containers/home/home.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    UserinfoComponent,
+    TimelineComponent,
+    AllusersComponent,
+
   ],
   imports: [
     BrowserModule,
