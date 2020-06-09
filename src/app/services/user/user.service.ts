@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class UserService {
 
 
   async register(body) {
-    const url = this.baseUrl + '/register';
+    const url = this.baseUrl + '/user/register';
     try {
         console.log(url, body);
         const data = await this.http.post(url, body).toPromise();
@@ -26,7 +27,7 @@ export class UserService {
 }
 
 async login(body) {
-    const url = this.baseUrl + '/login';
+    const url = this.baseUrl + '/user/login';
     try {
         console.log(url);
         console.log(body);
@@ -58,4 +59,18 @@ getIdentity(){
     }
     return this.identity;
     }
+
+/* Método para sacar LISTA de USUARIOS
+getUsers(page = null): Observable<any>{
+    const  headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.getToken());
+
+    return this._http.get(this.url+'users/'+page, {headers:headers});
+}
+
+/* Método para sacar un USUARIO
+getUser(id): Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.getToken());
+
+    return this._http.get(this.url+'user/'+id, {headers:headers});
+}*/
 }

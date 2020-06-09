@@ -68,8 +68,7 @@
 		</div>
         
 		<!-- Si NO estamos logueados -->
-		no
-		<div class="row justify-content-center">
+		<div class="row justify-content-center"  *ngIf="!identity">
 			<div class="col-lg-3">
 				<a [routerLink]="['/register']">
 					<div class="card text-white bg-warning mb-3">

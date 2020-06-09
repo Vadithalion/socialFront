@@ -41,13 +41,9 @@
 					</a>
 
 					<div class="dropdown-menu" data-toggle="collapse" data-target="#navbarResponsive">
-						<a class="dropdown-item" [routerLink]="['/perfil', identity._id]">
+						<a class="dropdown-item" [routerLink]="['/userinfo', identity._id]">
 							<span class="far fa-user-circle"></span>
 							Mi perfil
-						</a>
-						<a class="dropdown-item" [routerLink]="['/mis-datos']">
-							<span class="fas fa-clipboard-list"></span>
-							Mis datos
 						</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" (click)="logout()">

@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
 
   ) {
-    this.title = 'aloha!';
+    this.title = 'La Red Única!';
 
    }
 
@@ -35,6 +35,6 @@ export class HeaderComponent implements OnInit {
     localStorage.clear();
     this.identity = null;
     this.router.navigate(['/']);
-    location.reload(); // --> para forzar la recarga de home
-	}
+    location.reload();
+  }
 }
