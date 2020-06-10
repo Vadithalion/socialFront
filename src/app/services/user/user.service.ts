@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
+  // tslint:disable-next-line: ban-types
   [x: string]: Object;
 
   baseUrl = 'http://localhost:8000/api';
@@ -42,6 +43,7 @@ async login(body) {
 
 getToken(){
     const token = JSON.parse(localStorage.getItem('token'));
+    // tslint:disable-next-line: triple-equals
     if (token != undefined){
         this.token = token;
     }else{
@@ -67,6 +69,10 @@ getUsers(page = null): Observable<any>{
     return this._http.get(this.url+'users/'+page, {headers:headers});
 }
 
+
+getUserById(id){
+  return this.http.get<any>(environment.API_URL + `/users/userById/${id}`);
+}
 /* Método para sacar un USUARIO
 getUser(id): Observable<any>{
     let headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.getToken());
