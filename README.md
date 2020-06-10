@@ -1,6 +1,6 @@
 # socialFront 🚀
 
-![image](./assets/angular-9.JPG)
+![image](./assets/angular-9.jpg)
 ---
 ## Frontend con tecnología angular
 
